@@ -175,16 +175,16 @@ let result2 = Compose2 2
 // Pipelining
 // Pipeline operator
 // ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
-let Pipeline2 x = addOne x |> timesTwo
+let Pipeline1 x = addOne x |> timesTwo
 
 // Backward pipeline operator
 // ( <| ) : ('T -> 'U) -> 'T -> 'U
-let Pipeline1 x = addOne <| timesTwo x
-
-// Result is 5
-let result3 = Pipeline1 2
+let Pipeline2 x = addOne <| timesTwo x
 
 // Result is 6
+let result3 = Pipeline1 2
+
+// Result is 5
 let result4 = Pipeline2 2
 ```
 
